@@ -2,7 +2,7 @@
 <head>
 	<title>Convert your content to HTML</title>
 <!-- Place inside the <head> of your HTML -->
-<script type="text/javascript" src="<your installation path>/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
     selector: "textarea",
