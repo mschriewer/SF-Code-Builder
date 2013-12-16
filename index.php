@@ -26,7 +26,7 @@ tinymce.init({
 <form method="post">
     <textarea id="elm1"></textarea>
 </form>
-<div style="text-align:right"><img src="arrow.png"></div>
+<div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="arrow.png"></div>
 
 
 </body>
