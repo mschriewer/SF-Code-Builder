@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Convert your content to HTML</title>
+	<title>Convert content to HTML</title>
 <!-- Place inside the <head> of your HTML -->
 <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
@@ -10,9 +10,10 @@ tinymce.init({
         "code, link"
     ],
     menu: {
-        tools: {title: 'Get HTML!', items: 'code'}
+        tools: {title: 'Get HTML code', items: 'code'}
     },
-    toolbar1: "undo redo | styleselect formatselect | alignleft aligncenter alignright alignjustify bullist numlist bold italic underline strikethrough | link  |  code"
+    toolbar1: "undo redo | formatselect | alignleft aligncenter alignright alignjustify bullist numlist bold italic underline strikethrough | link  |  code",
+    auto_focus: "elm1"
 
  });
 </script>
@@ -23,7 +24,7 @@ tinymce.init({
 
 <!-- Place this in the body of the page content -->
 <form method="post">
-    <textarea></textarea>
+    <textarea id="elm1"></textarea>
 </form>
 <div style="text-align:right"><img src="arrow.png"></div>
 
