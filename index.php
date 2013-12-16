@@ -7,8 +7,12 @@
 tinymce.init({
     selector: "textarea",
     plugins: [
-        "code fullscreen"
-    ]
+        "code, link"
+    ],
+    menu: {
+        tools: {title: 'Get HTML!', items: 'code'}
+    },
+    toolbar1: "undo redo | styleselect formatselect | alignleft aligncenter alignright alignjustify bullist numlist bold italic underline strikethrough | link  |  code"
 
  });
 </script>
@@ -21,6 +25,7 @@ tinymce.init({
 <form method="post">
     <textarea></textarea>
 </form>
+<div style="text-align:right"><img src="arrow.png"></div>
 
 
 </body>
