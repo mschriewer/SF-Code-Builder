@@ -30,15 +30,36 @@ tinymce.init({
 <style type="text/css">
     body {
         font-family: lucida, arial, sans-serif;
+        margin: 0;
+        padding-bottom: 41px;
+        background-color: #eee;
     }
     .gutter-10 {
         padding:10px;
     }
+    .margin-10 {
+        margin: 10px;
+    }
     .center {
         text-align: center;
     }
+    .border-1-green {
+        border:1px solid #2DB200;
+        border-radius: 3px;
+    }
+    .border-1-red {
+        border:1px solid #999;
+        border-radius: 3px;
+    }
     .border-3 {
-        border:3px solid #eee;
+        border:3px solid #fff;
+    }
+    .bg-light-green {
+        background-color: #CFFFBF;
+    }
+
+    .bg-light-red {
+        background-color: #CCC;
     }
     .shade-3 {
         box-shadow: 0 0 3px #555;
@@ -57,6 +78,10 @@ tinymce.init({
     .top-0 {
         margin-top:0;
     }
+    #support {
+        padding-bottom: 20px;
+    }
+    form {margin: 0}
 
     @media all and (min-width: 768px) {
         .width-25-min-scr3 {
@@ -74,64 +99,90 @@ tinymce.init({
     #support h3 {
         font-family: 'Patrick Hand SC', lucida, arial, sans-serif;
     }
+        .footer {
+            width:100%;
+            background:#ccc;
+            box-shadow: 0 0 5px #444;
+            position: fixed;
+            bottom:0;
+        }
+        .footer p {
+            padding:5px;
+            font-family: Arial;
+            font-size: 10px;
+            text-align: left;
+            color:#666;
+        }
+        .footer a {
+            color:#333;
+            text-decoration: none;
+        }
 
 </style>
 <script type="text/javascript">
 $(document ).ready(function() {
-    $("#open").hide();
+    $("#openbox").hide();
     $("#close").click(function() {
         $("#support").slideUp();
-        $("#open").show();
-        $("#close").hide();
+        $("#openbox").show();
+        $("#closebox").hide();
     });
     $("#open").click(function() {
         $("#support").slideDown();
-        $("#open").hide();
-        $("#close").show();
+        $("#openbox").hide();
+        $("#closebox").show();
     });
 });
 </script>
 </head>
-<body id="fullpage">
-<div style="text-align:right"><button id="close">close [x]</button></div>
-<div style="text-align:right"><button id="open">open [+]</button></div>
-<div id="support">
-    <div class="width-25-min-scr3 width-50-max-scr2 left">
-        <div class="gutter-10 center">
-            <h3 class="top-0">Enter your content</h3>
-            <img src="image1.png" class="border-3 shade-3 flex">
-        </div>
+<body>
+    <div class="margin-10">
+    <div id="closebox" class="border-1-red bg-light-red gutter-10 shade-3">
+        <div><button id="close">Close Help [-]</button></div>
     </div>
-    <div class="width-25-min-scr3 width-50-max-scr2 left">
-        <div class="gutter-10 center">
-            <h3 class="top-0">Do your styling</h3>
-            <img src="image2.png" class="border-3 shade-3 flex">
-        </div>
+    <div id="openbox" class="border-1-green bg-light-green gutter-10 shade-3" style="margin-bottom:10px">
+        <div><button id="open">Open Help [+]</button></div>
     </div>
-    <div class="width-25-min-scr3 width-50-max-scr2 left">
-        <div class="gutter-10 center">
-            <h3 class="top-0">Maybe create a list</h3>
-            <img src="image3.png" class="border-3 shade-3 flex">
+
+    <div id="support">
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Enter your content</h3>
+                <img src="image1.png" class="border-3 shade-3 flex">
+            </div>
         </div>
-    </div>
-    <div class="width-25-min-scr3 width-50-max-scr2 left">
-        <div class="gutter-10 center">
-            <h3 class="top-0">Grab the HTML</h3>
-            <img src="image4.png" class="border-3 shade-3 flex">
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Do your styling</h3>
+                <img src="image2.png" class="border-3 shade-3 flex">
+            </div>
         </div>
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Maybe create a list</h3>
+                <img src="image3.png" class="border-3 shade-3 flex">
+            </div>
+        </div>
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Grab the HTML</h3>
+                <img src="image4.png" class="border-3 shade-3 flex">
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
+
+    <div class="clear"></div>
+
+    <img style="width:100%;max-width:640px;height:auto" src="image6.png">
+
+    <!-- Place this in the body of the page content -->
+    <form method="post">
+        <textarea id="elm1"></textarea>
+    </form>
+    <div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="image7.png"></div>
 </div>
 
-<div class="clear"></div>
-
-<img style="width:100%;max-width:640px;height:auto" src="image6.png">
-
-<!-- Place this in the body of the page content -->
-<form method="post">
-    <textarea id="elm1"></textarea>
-</form>
-<div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="arrow.png"></div>
-
-
+<div class="footer"><p><a href="http://jgrietveld.com" target="_blank">Jerry Rietveld</a>: Making the web work for you since 1995.</p></div>
 </body>
 </html>
