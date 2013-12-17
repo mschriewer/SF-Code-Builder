@@ -78,15 +78,24 @@ tinymce.init({
 </style>
 <script type="text/javascript">
 $(document ).ready(function() {
+    $("#open").hide();
     $("#close").click(function() {
         $("#support").slideUp();
+        $("#open").show();
+        $("#close").hide();
+    });
+    $("#open").click(function() {
+        $("#support").slideDown();
+        $("#open").hide();
+        $("#close").show();
     });
 });
 </script>
 </head>
 <body id="fullpage">
+<div style="text-align:right"><button id="close">close [x]</button></div>
+<div style="text-align:right"><button id="open">open [+]</button></div>
 <div id="support">
-    <div style="text-align:right"><button id="close">close [x]</button></div>
     <div class="width-25-min-scr3 width-50-max-scr2 left">
         <div class="gutter-10 center">
             <h3 class="top-0">Enter your content</h3>
