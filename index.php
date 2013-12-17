@@ -26,7 +26,7 @@ tinymce.init({
  });
 </script>
 <script src="http:////ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
 <style type="text/css">
     body {
         font-family: lucida, arial, sans-serif;
@@ -54,6 +54,9 @@ tinymce.init({
     .clear {
         clear:both;
     }
+    .top-0 {
+        margin-top:0;
+    }
 
     @media all and (min-width: 768px) {
         .width-25-min-scr3 {
@@ -68,6 +71,9 @@ tinymce.init({
             max-width: 150px;
         }
     }
+    #support h3 {
+        font-family: 'Patrick Hand SC', lucida, arial, sans-serif;
+    }
 
 </style>
 <script type="text/javascript">
@@ -78,30 +84,30 @@ $(document ).ready(function() {
 });
 </script>
 </head>
-<body>
+<body id="fullpage">
 <div id="support">
     <div style="text-align:right"><button id="close">close [x]</button></div>
     <div class="width-25-min-scr3 width-50-max-scr2 left">
         <div class="gutter-10 center">
-            <h3>Enter your content</h3>
+            <h3 class="top-0">Enter your content</h3>
             <img src="image1.png" class="border-3 shade-3 flex">
         </div>
     </div>
     <div class="width-25-min-scr3 width-50-max-scr2 left">
         <div class="gutter-10 center">
-            <h3>Do your styling</h3>
+            <h3 class="top-0">Do your styling</h3>
             <img src="image2.png" class="border-3 shade-3 flex">
         </div>
     </div>
     <div class="width-25-min-scr3 width-50-max-scr2 left">
         <div class="gutter-10 center">
-            <h3>Maybe create a list</h3>
+            <h3 class="top-0">Maybe create a list</h3>
             <img src="image3.png" class="border-3 shade-3 flex">
         </div>
     </div>
     <div class="width-25-min-scr3 width-50-max-scr2 left">
         <div class="gutter-10 center">
-            <h3>Grab the HTML</h3>
+            <h3 class="top-0">Grab the HTML</h3>
             <img src="image4.png" class="border-3 shade-3 flex">
         </div>
     </div>
