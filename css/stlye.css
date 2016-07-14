@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CSS Document */
+ body {
+        font-family: lucida, arial, sans-serif;
+        margin: 0;
+        padding: 40px 100px;
+        background-color: #eee;
+    }
+    .gutter-10 {
+        padding:10px;
+    }
+    .margin-10 {
+        margin: 10px;
+    }
+    .center {
+        text-align: center;
+    }
+    .border-1-green {
+        border:1px solid #2DB200;
+        border-radius: 3px;
+    }
+    .border-1-red {
+        border:1px solid #999;
+        border-radius: 3px;
+    }
+    .border-3 {
+        border:3px solid #fff;
+    }
+    .bg-light-green {
+        background-color: #CFFFBF;
+    }
+
+    .bg-light-red {
+        background-color: #CCC;
+    }
+    .shade-3 {
+        box-shadow: 0 0 3px #555;
+    }
+    .left {
+        float:left;
+    }
+    .flex {
+        width:100%;
+        max-width: 209px;
+        height:auto;
+    }
+    .clear {
+        clear:both;
+    }
+    .top-0 {
+        margin-top:0;
+    }
+    #support {
+        padding-bottom: 20px;
+    }
+    form {margin: 0}
+
+    @media all and (min-width: 768px) {
+        .width-25-min-scr3 {
+            width:25%;
+        }
+    }
+	
+    @media all and (max-width: 767px) {
+		body {
+			padding: 10px 20px;
+			}
+        .width-50-max-scr2 {
+            width:50%;
+        }
+        .flex {
+            max-width: 150px;
+        }
+    }
+	
+    #support h3 {
+        font-family: 'Patrick Hand SC', lucida, arial, sans-serif;
+    }
+        .footer {
+            width:100%;
+            background:#ccc;
+            box-shadow: 0 0 5px #444;
+            position: fixed;
+            bottom:0;
+        }
+        .footer p {
+            padding:5px;
+            font-family: Arial;
+            font-size: 10px;
+            text-align: left;
+            color:#666;
+        }
+        .footer a {
+            color:#333;
+            text-decoration: none;
+        }
+
