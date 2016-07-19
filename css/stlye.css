@@ -54,6 +54,26 @@
         padding-bottom: 20px;
     }
     form {margin: 0}
+	
+	
+	/* Add To Calendar form */
+	#addtocal {
+		background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		padding: 20% 25%;
+		position: absolute;
+		top: 0;
+	}
+	
+	#addtocal #sec1 {
+		position:relative;
+		background: #ffffff;
+		padding: 10% 20%;
+		display: block;
+    	overflow: hidden;
+	}
 
     @media all and (min-width: 768px) {
         .width-25-min-scr3 {

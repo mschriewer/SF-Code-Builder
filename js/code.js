@@ -329,5 +329,9 @@ CODER.commonMethod = {
 		$(box).slideDown();
 		$(obtn).hide();
 		$(cbtn).show();
+	},
+	
+	showAddDiv: function (div) {
+		$(div).fadeOut(1000);
 	}
 };

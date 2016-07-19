@@ -8,8 +8,9 @@
 tinymce.init({
     selector: "textarea",
     plugins: [
-        "code, link, image imagetools, table"
+        "code, link, image imagetools, table, paste"
     ],
+	paste_as_text: true,
 	imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
     style_formats: [  
 		{title: 'Font', items: [ 
@@ -55,6 +56,8 @@ $(document ).ready(function() {
 	//Close boxes when page is ready
 	CODER.commonMethod.closeBox("#openbox", "#closebox", "#support");
    	CODER.commonMethod.closeBox ("#opentemp", "#closetemp", "#templates");
+	//Hide addToCalendar form div
+	$("#addtocal").hide();
    //FN's for close button
     $("#close").click(function() {
         CODER.commonMethod.closeBox ("#openbox", "#closebox", "#support");
@@ -145,6 +148,22 @@ $(document ).ready(function() {
         <textarea id="elm1"></textarea>
     </form>
     <div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="images/image7.png"></div>
+</div>
+<div id="addtocal">
+	<form id="example-form" action="#"> 
+    <div> 
+        <h3>Account</h3> 
+        <section> 
+            <label for="userName">User name *</label> 
+            <input id="userName" name="userName" type="text" class="required"> 
+            <label for="password">Password *</label> 
+            <input id="password" name="password" type="text" class="required"> 
+            <label for="confirm">Confirm Password *</label> 
+            <input id="confirm" name="confirm" type="text" class="required"> 
+            <p>(*) Mandatory</p> 
+        </section> 
+    </div> 
+</form> 
 </div>
 <div class="footer"><p><a href="http://jgrietveld.com" target="_blank">Jerry Rietveld</a>: Making the web work for you since 1995 / Mike Schriewer</p></div>
 </body>
