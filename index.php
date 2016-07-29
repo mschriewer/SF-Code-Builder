@@ -20,7 +20,8 @@ tinymce.init({
 			{title: 'Heading 3', format: 'h3'},
 			{title: 'Heading 4', format: 'h4'},
 			{title: 'Heading 5', format: 'h5'},
-			{title: 'Font-size-15', selector: 'li,p,td', classes: 'font-15'}
+			{title: 'Font Size 15px', selector: 'li,p,td', classes: 'font-15'},
+			{title: 'Font White', selector: 'li,p,td', classes: 'font-white'}
 		]},
 		{title: 'Spacing', items: [ 
 			{title: 'Top margin 20px', selector: 'li,p,td', classes: 'top-20'},
@@ -121,6 +122,12 @@ $(document ).ready(function() {
     <div id="templates">
     	<div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
+                <h3 class="top-0">Details</h3>
+                <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_details);" href="#"><img src="images/img-prew-details.jpg" class="border-3 shade-3 flex"></a>
+            </div>
+        </div>
+    	<div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
                 <h3 class="top-0">Agenda</h3>
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_agenda);" href="#"><img src="images/img-prew-standard.jpg" class="border-3 shade-3 flex"></a>
             </div>
@@ -133,8 +140,26 @@ $(document ).ready(function() {
         </div>
         <div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
+                <h3 class="top-0">Location & Timing</h3>
+                <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_location);" href="#"><img src="images/img-prew-loc.jpg" class="border-3 shade-3 flex"></a>
+            </div>
+        </div>
+        <!--div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
                 <h3 class="top-0">Speakers</h3>
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_speakers);" href="#"><img src="images/img-prew-speakers.jpg" class="border-3 shade-3 flex"></a>
+            </div>
+        </div-->
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Waitlist</h3>
+                <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_waitlist);" href="#"><img src="images/img-prew-waitlist.jpg" class="border-3 shade-3 flex"></a>
+            </div>
+        </div>
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Waitlist conf</h3>
+                <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_waitlist_conf);" href="#"><img src="images/img-prew-waitlist-conf.jpg" class="border-3 shade-3 flex"></a>
             </div>
         </div>
     </div>

@@ -311,7 +311,41 @@ str_speakers: "<h4 class=\"bottom-10\">Speakers</h4>\
 </div>\
 <div class=\"clear-both\">\
 </div>\
-</div>"
+</div>",
+str_location : "<p><strong>Location:</strong><br />\
+[Venue name],<br />\
+[Street / Number],<br />\
+[Postal code] [City]</p>\
+<p><strong>Date:</strong><br />\
+[Date]</p>\
+<p><strong>Time:</strong><br />\
+[From - Until]</p>",
+str_details : "<h2>Headline</h2>\
+<p>Add your copy in here. Add paragraphs by 'Enter'</p>\
+<p class=\"flush\"><strong>What we will cover:(Feel free to delete the bullet list)</strong></p>\
+<ul>\
+<li>item 1</li>\
+<li>item 2</li>\
+<li>item 3</li>\
+<li>item 4</li>\
+</ul>\
+<p><strong>Places are limited so don't miss out and register today!</strong></p>\
+<p><strong>Venue:</strong><br />\
+[Venue name],<br />\
+[Street / Number],<br />\
+[Postal code] [City]</p>\
+<p><strong>Date:</strong><br />\
+[Date]</p>\
+<p><strong>Time:</strong><br />\
+[From - Until]</p>",
+str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [venue] is full and cannot take your RSVP.</strong></p>\
+<p>If you would like to be placed on the wait list, please complete this form and you will be contacted if a space opens up.  Please note: if you do not hear from us, that means we cannot accommodate your RSVP.</p>\
+<p>Sincerely,<br>\
+the Salesforce Team</p>",
+str_waitlist_conf : "<p><strong>Thank you! You are on the waitlist for Dreamforce to you in [venue]. We will be in touch if a space opens up.</strong></p>\
+<p>Due to high demand, we cannot reply unless a space opens up. If you do not hear from us, that means we cannot accommodate your request.</p>\
+<p>Thanks,<br>The Salesforce Team</p>"
+
 };
 
 CODER.commonMethod = {
@@ -333,5 +367,38 @@ CODER.commonMethod = {
 	
 	showAddDiv: function (div) {
 		$(div).fadeOut(1000);
+	},
+	
+	getAddToCalendarData: function (data) {
+		var object = {};
+		var codeSnippets = ["<div class=\"add-to-calendar\">\
+<a title=\"Add to Calendar\" class=\"addthisevent\" href=\"https://www.salesforce.com/fr/events/details/paris/\">Add to Calendar",
+		"</a></div>"];
+		var str= "";
+		var name= "";
+		// Put form inputs into an array
+		var array = $(data).serializeArray();
+		// Make an object out of the array
+		$.each(array, function(index, item) {
+			object[item.name] = item.value;
+			//Merge date & time strings for start & end date
+			//*** Better solution would be to sort out the object ***
+			if (item.name == "atc_time_start") {
+					name = object["_start"] + " " + item.value;
+					str += "<span class=\"_start\">"+ name +"</span>";
+			} else if (item.name == "atc_time_end") {
+				name = object["_end"] + " " + item.value;
+					str += "<span class=\"_end\">"+ name +"</span>";
+			}
+			if (item.name != "_start" &&
+				item.name != "_end" &&
+				item.name != "atc_time_start" &&
+				item.name != "atc_time_end") {
+				str += "<span class=\""+item.name+"\">"+item.value+"</span>";
+			}
+		});
+		
+		str = codeSnippets[0] + str + codeSnippets[1];
+		return str;
 	}
 };

@@ -6,6 +6,16 @@
         padding: 40px 100px;
         background-color: #eee;
     }
+	
+	h1 {
+		font-size:25px;
+	}
+	h2 {
+		font-size:20px;
+	}
+	h3 {
+		font-size:18px;
+	}
     .gutter-10 {
         padding:10px;
     }
@@ -73,7 +83,60 @@
 		padding: 10% 20%;
 		display: block;
     	overflow: hidden;
+		padding: 1px;
+		border:#ccc;
 	}
+	
+	#addtocalBar {
+		position:relative;
+		background: #eee;
+		display: block;
+    	overflow: hidden;
+		padding: 10px;
+	}
+	
+	#addtocalBar h3 {
+		width:80%;
+		display:block;
+		float:left;
+		padding:0;
+		margin:0;
+	}
+	
+	#addtocalContent {
+		display: block;
+    	overflow: scroll;
+		padding: 10px;
+	}
+	
+	#addtocalClose {
+		float:right;
+		width: 20px;
+		height: 20px;
+		background:#B3AFAF;
+		text-align:center;
+	}
+	
+	form label,
+	form input,
+	form p,
+	form button,
+	form select {
+		display: block;
+		float: left;
+		clear: both;
+	}
+	
+	form button {
+		width: 120px;
+		height: 30px;
+	}
+	
+	form input {
+		margin-bottom: 15px;
+	}
+	
+	/*  AddToCalendar end  */
 
     @media all and (min-width: 768px) {
         .width-25-min-scr3 {
