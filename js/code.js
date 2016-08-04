@@ -338,10 +338,10 @@ str_details : "<h2>Headline</h2>\
 [Date]</p>\
 <p><strong>Time:</strong><br />\
 [From - Until]</p>",
-str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [venue] is full and cannot take your RSVP.</strong></p>\
-<p>If you would like to be placed on the wait list, please complete this form and you will be contacted if a space opens up.  Please note: if you do not hear from us, that means we cannot accommodate your RSVP.</p>\
-<p>Sincerely,<br>\
-the Salesforce Team</p>",
+str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [city]&nbsp;is full and cannot take your RSVP.</strong></p>\
+<p>If you would like to be placed on the wait list, please complete this form and you will be contacted if a space opens up.</p>\
+<p><strong>Please note: if you do not hear from us, that means we cannot accommodate your RSVP.</strong></p>\
+<p>Sincerely,<br />the Salesforce Team</p>",
 str_waitlist_conf : "<p><strong>Thank you! You are on the waitlist for Dreamforce to you in [venue]. We will be in touch if a space opens up.</strong></p>\
 <p>Due to high demand, we cannot reply unless a space opens up. If you do not hear from us, that means we cannot accommodate your request.</p>\
 <p>Thanks,<br>The Salesforce Team</p>"
