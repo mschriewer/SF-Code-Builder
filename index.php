@@ -21,16 +21,20 @@ tinymce.init({
 			{title: 'Heading 4', format: 'h4'},
 			{title: 'Heading 5', format: 'h5'},
 			{title: 'Font Size 15px', selector: 'li,p,td', classes: 'font-15'},
-			{title: 'Font White', selector: 'li,p,td', classes: 'font-white'}
+			{title: 'Font White', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'font-white'}
 		]},
 		{title: 'Spacing', items: [ 
-			{title: 'Top margin 20px', selector: 'li,p,td', classes: 'top-20'},
-			{title: 'Top margin 30px', selector: 'li,p,td', classes: 'top-30'},
-			{title: 'Bottom margin 20px', selector: 'li,p,td', classes: 'bottom-20'},
-			{title: 'Bottom margin 30px', selector: 'li,p,td', classes: 'bottom-30'},
-			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3', classes: 'flush'}
+			{title: 'Top margin 20px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'top-20'},
+			{title: 'Top margin 30px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'top-30'},
+			{title: 'Bottom margin 20px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'bottom-20'},
+			{title: 'Bottom margin 30px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'bottom-30'},
+			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
 		]}
     ],
+    relative_urls : false,
+	remove_script_host : true,
+	document_base_url : "/",
+	convert_urls : true,
     formats: {
     list: {selector : 'li', classes : 'left'},
     },
@@ -144,12 +148,12 @@ $(document ).ready(function() {
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_location);" href="#"><img src="images/img-prew-loc.jpg" class="border-3 shade-3 flex"></a>
             </div>
         </div>
-        <!--div class="width-25-min-scr3 width-50-max-scr2 left">
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
                 <h3 class="top-0">Speakers</h3>
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_speakers);" href="#"><img src="images/img-prew-speakers.jpg" class="border-3 shade-3 flex"></a>
             </div>
-        </div-->
+        </div>
         <div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
                 <h3 class="top-0">Waitlist</h3>
