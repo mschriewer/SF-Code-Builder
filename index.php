@@ -169,12 +169,6 @@ $(document ).ready(function() {
         </div>
         <div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
-                <h3 class="top-0">AddToCalendar</h3>
-                <a onClick="CODER.commonMethod.openAddToCalendar();" href="#"><img src="images/img-prew-addtocal.jpg" class="border-3 shade-3 flex"></a>
-            </div>
-        </div>
-        <div class="width-25-min-scr3 width-50-max-scr2 left">
-            <div class="gutter-10 center">
                 <h3 class="top-0">Waitlist</h3>
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_waitlist);" href="#"><img src="images/img-prew-waitlist.jpg" class="border-3 shade-3 flex"></a>
             </div>
