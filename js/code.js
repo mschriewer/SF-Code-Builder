@@ -253,63 +253,12 @@ Description</p>\
 </tbody>\
 </table>\
 <p class=\"flush top-30\">Footnote</p>",
-str_speakers: "<h4 class=\"bottom-10\">Speakers</h4>\
-\
-<div class=\"flex\" style=\"background-color:#f3f3f3\">\
-\
-<div class=\"grid-cell grid-20\">\
-<img alt=\"\" src=\"http://www.salesforce.com/uk/assets/images/webinar/guest-speaker-will-moxley.jpg\" style=\"border:1px solid #999\">\
-</div>\
-<div class=\"grid-cell grid-60 top-10 left-10-only-scr3 left-20-max-scr2\">\
-<h4>Will Moxley</h4>\
-<p style=\"margin-bottom:5px;\" class=\"font-14\">\
-<strong>SVP Sales Cloud Product Management</strong>\
-<br>\
-<span class=\"font-16\">Salesforce</span>\
-</p>\
-</div>\
-<div class=\"grid-cell grid-20 top-20 show-min-scr3\">\
-<img alt=\"\" src=\"http://www.salesforce.com/de/assets/images/webinar/brandmaker-de-image.png\">\
-</div>\
-<div class=\"clear-both\">\
-</div>\
-</div>\
-<br>\
-<div class=\"flex margin-bottom-20\" style=\"background-color:#f3f3f3\">\
-<div class=\"grid-cell grid-20\">\
-<img alt=\"\" src=\"http://www.salesforce.com/uk/assets/images/webinar/guest-speaker-jeremy-waite.jpg\" style=\"border:1px solid #999\">\
-</div>\
-<div class=\"grid-cell grid-60 top-10 left-10-only-scr3 left-20-max-scr2\">\
-<h4>Jeremy Waite</h4>\
-<p style=\"margin-bottom:5px;\" class=\"font-14\">\
-<strong>Head of Digital Strategy</strong>\
-<br>\
-<span class=\"font-16\">Salesforce</span>\
-</p>\
-</div>\
-<div class=\"grid-cell grid-20 top-20 show-min-scr3\">\
-<img alt=\"\" src=\"http://www.salesforce.com/uk/assets/images/webinar/salesforce-logo-mini.png\">\
-</div>\
-<div class=\"clear-both\">\
-</div>\
-</div>\
-<br>\
-<div class=\"flex\" style=\"background-color:#f3f3f3\">\
-<div class=\"grid-cell grid-20\">\
-<img alt=\"\" src=\"http://www.salesforce.com/uk/assets/images/webinar/guest-speaker-stacey-smith.jpg\" style=\"border:1px solid #999\">\
-</div>\
-<div class=\"grid-cell grid-60 top-10 left-10-only-scr3 left-20-max-scr2\">\
-<h4>Stacey Smith</h4>\
-<p style=\"margin-bottom:5px;\" class=\"font-14\">\
-<strong>Senior Director</strong>\
-<br>\
-<span class=\"font-16\">CEB</span>\
-</p>\
-</div>\
-<div class=\"grid-cell grid-20 top-20 show-min-scr3\">\
-<img alt=\"\" src=\"http://www.salesforce.com/uk/assets/images/webinar/salesforce-logo-mini.png\">\
-</div>\
-<div class=\"clear-both\">\
+str_speakers: "<!-- SPEAKER -->\
+<div class=\"flex\" style=\"background-color: #f3f3f3; overflow: hidden; padding: 10px; margin-bottom: 30px;\">\
+<div class=\"grid-cell grid-20\"><img src=\"/eu/assets/images/events/man.jpg\" alt=\"Name Surname\" /></div>\
+<div class=\"grid-cell grid-60 left-10-only-scr3 left-20-max-scr2\">\
+<h4 style=\"color: #666; font-weight: bold; font-size: 18px;\">Speaker Name Surname</h4>\
+<p class=\"font-16\" style=\"margin-bottom: 5px;\">Job title | <span class=\"font-16 bold\" style=\"color: #00a1e0;\">Company</span></p>\
 </div>\
 </div>",
 str_location : "<p><strong>Location:</strong><br />\
@@ -369,12 +318,56 @@ CODER.commonMethod = {
 		$(div).fadeOut(1000);
 	},
 	
+	closeAddtoCal: function () {
+		$('#addtocal').fadeOut();
+	},
+	
+	openAddToCalendar: function () {
+		var h= $(window).height();
+		$('#sec1').height(h - 100);
+		$('#addtocal').fadeIn(500);
+	},
+	
+	openResultWindow: function (str) {
+		//Calculate height of window
+		var h= $(window).height();
+		var fac = h*.3;
+		$('#sec1').height(h - 100);
+		$('#result').height(h-fac);
+		//
+		// Update Window Title
+		$("#addToTitle").text ("Copy / Paste your AddToCalendar code");
+		//
+		//Handle windows fadIn / fadeOut
+		$("#addtocalBack").show();
+		$('#result').attr("value", str);
+		$("#addtocalContent").fadeOut();
+		$("#atcResult").fadeIn();
+		return;
+	},
+	
+	openCalendarContent: function () {
+		//Clear result textarea;
+		$('#result').attr("value", "");
+		//
+		//Calculate height
+		var h= $(window).height();
+		//
+		// Update Window Title
+		$("#addToTitle").text ("Enter AddToCalendar Data");
+		//
+		$('#sec1').height(h - 30);
+		$("#addtocalContent").fadeIn();
+		$("#atcResult").fadeOut();
+		$("#addtocalBack").fadeOut();
+	},
+	
 	getAddToCalendarData: function (data) {
 		var object = {};
 		var codeSnippets = ["<div class=\"add-to-calendar\">\
-<a title=\"Add to Calendar\" class=\"addthisevent\" href=\"https://www.salesforce.com/fr/events/details/paris/\">Add to Calendar",
-		"</a></div>"];
+<a title=\"Add to Calendar\" class=\"addthisevent\" ","<span class=\"_date_format\">YYYY/MM/DD</span></a></div>"];
 		var str= "";
+		console.log('str=' + str);
 		var name= "";
 		// Put form inputs into an array
 		var array = $(data).serializeArray();
@@ -383,22 +376,44 @@ CODER.commonMethod = {
 			object[item.name] = item.value;
 			//Merge date & time strings for start & end date
 			//*** Better solution would be to sort out the object ***
-			if (item.name == "atc_time_start") {
+			if (item.name == "_url") {
+					str += "href=\""+ item.value +"\">";
+			} else if (item.name == "_cta") {
+					str += item.value;
+			} else if (item.name == "atc_time_start") {
 					name = object["_start"] + " " + item.value;
 					str += "<span class=\"_start\">"+ name +"</span>";
 			} else if (item.name == "atc_time_end") {
 				name = object["_end"] + " " + item.value;
 					str += "<span class=\"_end\">"+ name +"</span>";
+			} else if (item.name == "_timezone") {
+					name = "<span class=\""+item.name+"\" style=\"display: none;\">"+item.value+"</span>";
+					str += name; 
+			} else if (item.name == "_description") {
+				str += "<span class=\""+item.name+"\">"+CODER.commonMethod.valAddToCalendarTextArea (item.value)+"</span>";	
 			}
-			if (item.name != "_start" &&
-				item.name != "_end" &&
-				item.name != "atc_time_start" &&
-				item.name != "atc_time_end") {
-				str += "<span class=\""+item.name+"\">"+item.value+"</span>";
+			if (item.name != "_result" &&
+				item.name != "_url" &&
+				item.name != "_cta" &&
+				item.name != "_timezone") {
+				if (item.name != "_start" &&
+					item.name != "_end" &&
+					item.name != "atc_time_start" &&
+					item.name != "atc_time_end" &&
+					item.name != "_description") {
+					str += "<span class=\""+item.name+"\">"+item.value+"</span>";
+				}
 			}
+			console.log (item.name + ": " + item.value);
 		});
 		
 		str = codeSnippets[0] + str + codeSnippets[1];
-		return str;
+		CODER.commonMethod.openResultWindow(str);
+		//return str;
+	},
+	
+	// Validate textarea content of the AddTOCalendar generator
+	valAddToCalendarTextArea: function (data) {
+		return data.replace(/\n|\r\n|\r/g, '\\n');
 	}
 };

@@ -6,11 +6,10 @@
 <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
-    selector: "textarea",
+    selector: "#elm1",
     plugins: [
-        "code, link, image imagetools, table, paste"
+        "code, link, image imagetools, table"
     ],
-	paste_as_text: true,
 	imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
     style_formats: [  
 		{title: 'Font', items: [ 
@@ -24,33 +23,30 @@ tinymce.init({
 			{title: 'Font White', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'font-white'}
 		]},
 		{title: 'Spacing', items: [ 
-			{title: 'Top margin 20px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'top-20'},
-			{title: 'Top margin 30px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'top-30'},
-			{title: 'Bottom margin 20px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'bottom-20'},
-			{title: 'Bottom margin 30px', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'bottom-30'},
-			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
+			{title: 'Top margin 20px', selector: 'li,p,td', classes: 'top-20'},
+			{title: 'Top margin 30px', selector: 'li,p,td', classes: 'top-30'},
+			{title: 'Bottom margin 20px', selector: 'li,p,td', classes: 'bottom-20'},
+			{title: 'Bottom margin 30px', selector: 'li,p,td', classes: 'bottom-30'},
+			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3', classes: 'flush'}
 		]}
     ],
-    relative_urls : false,
-	remove_script_host : true,
-	document_base_url : "/",
-	convert_urls : true,
     formats: {
     list: {selector : 'li', classes : 'left'},
     },
+	content_style: [".add-to-calendar {margin: 10px; border: 5px solid red; padding: 3px}"],
     menu: {
         tools: {title: 'Get HTML code', items: 'code'}
     },
     toolbar1: "undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | link  |   image   |   imagetools   |  table   |   code",
     auto_focus: "elm1",
-  	height : 600
+  	height : 300
  });
-
+ 
 </script>
-<script src="js/jQuery/jquery-1.6.1.min.js"></script>
+<script src="js/jQuery/jquery-1.6.1.min.js" type="text/javascript"></script>
 
 <!--script src="http:////ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
-<script src="js/code.js"></script>
+<script src="js/code.js" type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
 <style type="text/css">
    
@@ -61,8 +57,10 @@ $(document ).ready(function() {
 	//Close boxes when page is ready
 	CODER.commonMethod.closeBox("#openbox", "#closebox", "#support");
    	CODER.commonMethod.closeBox ("#opentemp", "#closetemp", "#templates");
-	//Hide addToCalendar form div
-	$("#addtocal").hide();
+	//Close AddToCalendar window
+	//$("#addtocal").hide();
+	$("#atcResult").hide();
+	$("#addtocalBack").hide();
    //FN's for close button
     $("#close").click(function() {
         CODER.commonMethod.closeBox ("#openbox", "#closebox", "#support");
@@ -186,22 +184,18 @@ $(document ).ready(function() {
             </div>
         </div>
     </div>
-
     <div class="clear"></div>
 
     <img style="width:100%;max-width:640px;height:auto" src="images/image6.png">
-    
+
     <!-- Place this in the body of the page content -->
     <form method="post">
         <textarea id="elm1"></textarea>
     </form>
-    <div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="images/image7.png"></div>  
-</div>
-
-<div class="footer"><p><a href="http://jgrietveld.com" target="_blank">Jerry Rietveld</a>: Making the web work for you since 1995 / Mike Schriewer</p></div>
-
-<!-- Form to capture AddTOCalendar code -->
-    <div id="addtocal" method="post">
+    <div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="images/image7.png"></div>
+    
+     <!-- Form to capture AddTOCalendar code -->
+    <div id="addtocal">
         <form id="data" action="#"> 
             <div id="sec1"> 
         	<div id="addtocalBar">
@@ -239,7 +233,7 @@ $(document ).ready(function() {
                     <input id="venue" name="_location" type="text" placeholder="Location" />
                     <label for="_organizer">Organizer *</label>
                     <input id="organizer" name="_organizer" type="text" placeholder="Organizer" />
-                    <label for="_organizer_email">Email Orgnaizer *</label>
+                    <label for="_organizer_email">Email Organizer *</label>
                     <input id="email_organizer" name="_organizer_email" type="text" placeholder="Email Organizer" />
         			<button type="submit" id="button" value="submit">senden</button>
                     <p>(*) Mandatory</p>
@@ -252,5 +246,7 @@ $(document ).ready(function() {
     </div>
 	<!-- End Form -->
     
+</div>
+<div class="footer"><p><a href="http://jgrietveld.com" target="_blank">Jerry Rietveld</a>: Making the web work for you since 1995 / Mike Schriewer</p></div>
 </body>
 </html>
