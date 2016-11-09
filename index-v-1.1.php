@@ -30,6 +30,14 @@ tinymce.init({
 			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3', classes: 'flush'}
 		]}
     ],
+	allow_html_in_named_anchor: true,
+	extended_valid_elements: 'pre[*],script[*],style[*]', 
+	valid_children: "+body[style|script],pre[script|div|p|br|span|img|style|h1|h2|h3|h4|h5],*[*]",
+	valid_elements : '*[*]', 
+	relative_urls : false,
+	remove_script_host : true,
+	document_base_url : "/",
+	convert_urls : true,
     formats: {
     list: {selector : 'li', classes : 'left'},
     },
