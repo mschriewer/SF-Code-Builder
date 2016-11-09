@@ -8,7 +8,7 @@
 tinymce.init({
     selector: "#elm1",
     plugins: [
-        "code, link, image imagetools, table"
+        "code, link, image imagetools, table, paste"
     ],
 	imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
     style_formats: [  
@@ -32,7 +32,7 @@ tinymce.init({
 			{title: 'Bottom padding 20px', selector: 'li,p,td', classes: 'bottom-20'},
 			{title: 'Bottom padding 30px', selector: 'li,p,td', classes: 'bottom-30'},
 			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
-		]}
+		]},
     ],
 	allow_html_in_named_anchor: true,
 	extended_valid_elements: 'pre[*],script[*],style[*]', 
@@ -46,10 +46,7 @@ tinymce.init({
     list: {selector : 'li', classes : 'left'},
     },
 	content_style: [".add-to-calendar {margin: 10px; border: 5px solid red; padding: 3px}"],
-    menu: {
-        tools: {title: 'Get HTML code', items: 'code'}
-    },
-    toolbar1: "undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | link  |   image   |   imagetools   |  table   |   code",
+    toolbar1: "undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | link  |   image   |   imagetools   |  table   |   removeformat   |   pastetext   |   code",
     auto_focus: "elm1",
   	height : 300
  });
