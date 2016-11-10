@@ -7,6 +7,8 @@
 <script type="text/javascript">
 tinymce.init({
     selector: "#elm1",
+	theme: 'modern',
+	skin: 'mystic',
     plugins: [
         "code, link, image imagetools, table, paste"
     ],
@@ -103,10 +105,10 @@ $(document ).ready(function() {
 </head>
 <body>
     <div class="margin-10">
-    <div id="closebox" class="border-1-red bg-light-red gutter-10 shade-3">
+    <div id="closebox" class="border-grey bg-light-grey gutter-10">
         <div><button id="close">Close Help [-]</button></div>
     </div>
-    <div id="openbox" class="border-1-green bg-light-green gutter-10 shade-3" style="margin-bottom:10px">
+    <div id="openbox" class="border-grey bg-grey gutter-10" style="margin-bottom:10px">
         <div><button id="open">Open Help [+]</button></div>
     </div>
 	<!--SUPPORT-->
@@ -137,10 +139,10 @@ $(document ).ready(function() {
         </div>
         <div class="clear"></div>
     </div>
-    <div id="closetemp" class="border-1-red bg-light-red gutter-10 shade-3">
+    <div id="closetemp" class="border-grey bg-light-grey gutter-10">
         <div><button id="closeTmpBtn">Close Templates [-]</button></div>
     </div>
-    <div id="opentemp" class="border-1-green bg-light-green gutter-10 shade-3" style="margin-bottom:10px">
+    <div id="opentemp" class="border-grey bg-grey gutter-10" style="margin-bottom:30px">
         <div><button id="openTmpBtn">Open Templates [+]</button></div>
     </div>
     <div id="templates">
@@ -195,13 +197,10 @@ $(document ).ready(function() {
     </div>
     <div class="clear"></div>
 
-    <img style="width:100%;max-width:640px;height:auto" src="images/image6.png">
-
     <!-- Place this in the body of the page content -->
     <form method="post">
         <textarea id="elm1"></textarea>
     </form>
-    <div style="text-align:right"><img style="width:100%;max-width:563px;height:auto" src="images/image7.png"></div>
     
      <!-- Form to capture AddTOCalendar code -->
     <div id="addtocal">
@@ -256,6 +255,6 @@ $(document ).ready(function() {
 	<!-- End Form -->
     
 </div>
-<div class="footer"><p><a href="http://jgrietveld.com" target="_blank">Jerry Rietveld</a>: Making the web work for you since 1995 / Mike Schriewer</p></div>
+<div class="footer"><p>Jerry Rietveld / Mike Schriewer</p></div>
 </body>
 </html>

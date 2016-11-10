@@ -4,7 +4,7 @@
         font-family: lucida, arial, sans-serif;
         margin: 0;
         padding: 40px 100px;
-        background-color: #eee;
+        background-color: #627388;
     }
 	
 	h1 {
@@ -15,6 +15,9 @@
 	}
 	h3 {
 		font-size:18px;
+	}
+	h3 {
+		color:#b5b9bf;
 	}
     .gutter-10 {
         padding:10px;
@@ -36,10 +39,21 @@
     .border-3 {
         border:3px solid #fff;
     }
+	
+	.border-grey {
+		border: 1px solid #2f373f;
+	}
+	
     .bg-light-green {
         background-color: #CFFFBF;
     }
-
+	
+	.bg-grey {
+		background-color: #404952;
+	}
+	.bg-light-grey {
+		background-color: #545e67;
+	}
     .bg-light-red {
         background-color: #CCC;
     }
@@ -60,9 +74,17 @@
     .top-0 {
         margin-top:0;
     }
-    #support {
-        padding-bottom: 20px;
+    #support,
+	#templates {
+        padding: 20px;
+		background: #404952;
+		margin-bottom:30px;
+		display:block;
+		overflow: hidden;
     }
+	#support {
+		margin-bottom: 10px;
+	}
     form {margin: 0}
 	
 	
@@ -212,7 +234,7 @@
     }
         .footer {
             width:100%;
-            background:#ccc;
+            background:#fff;
             box-shadow: 0 0 5px #444;
             position: fixed;
             bottom:0;
