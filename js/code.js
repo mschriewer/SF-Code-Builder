@@ -255,7 +255,7 @@ Description</p>\
 <p class=\"flush top-30\">Footnote</p>",
 str_speakers: "<!-- SPEAKER -->\
 <div class=\"flex\" style=\"background-color: #f3f3f3; overflow: hidden; padding: 10px; margin-bottom: 30px;\">\
-<div class=\"grid-cell grid-20\"><img src=\"/eu/assets/images/events/man.jpg\" alt=\"Name Surname\" /></div>\
+<div class=\"grid-cell grid-20\"><img src=\"/uk/assets/images/webinar/man.jpg\" alt=\"Name Surname\" /></div>\
 <div class=\"grid-cell grid-60 left-10-only-scr3 left-20-max-scr2\">\
 <h4 style=\"color: #666; font-weight: bold; font-size: 18px;\">Speaker Name Surname</h4>\
 <p class=\"font-16\" style=\"margin-bottom: 5px;\">Job title | <span class=\"font-16 bold\" style=\"color: #00a1e0;\">Company</span></p>\
