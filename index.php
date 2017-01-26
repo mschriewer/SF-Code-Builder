@@ -1,5 +1,4 @@
-<html>
-<head>
+<html><head>
 	<title>Convert content to HTML</title>
 <!-- Place inside the <head> of your HTML -->
 <link rel="stylesheet" href="css/stlye.css" type="text/css">
@@ -35,23 +34,31 @@ tinymce.init({
 			{title: 'Bottom padding 30px', selector: 'li,p,td', classes: 'bottom-30'},
 			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
 		]},
+		{title: 'Breakouts', items: [ 
+			{title: 'Time format', selector: 'p', classes: 'flush bold top-10'},
+			{title: 'FAQ Title format', selector: 'p', classes: 'faqTitle'},
+			{title: 'FAQ Abstract format', selector: 'div,p', classes: 'faqContent'},
+		]}
     ],
 	allow_html_in_named_anchor: true,
 	extended_valid_elements: 'pre[*],script[*],style[*]', 
 	valid_children: "+body[style|script],pre[script|div|p|br|span|img|style|h1|h2|h3|h4|h5],*[*]",
 	valid_elements : '*[*]', 
+	invalid_classes : 'faqContent',
 	relative_urls : false,
 	remove_script_host : true,
 	document_base_url : "/",
 	convert_urls : true,
     formats: {
-    list: {selector : 'li', classes : 'left'},
+    list: {selector : 'li', classes : 'left'}
     },
 	content_style: [".add-to-calendar {margin: 10px; border: 5px solid red; padding: 3px}"],
     toolbar1: "undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | link  |   image   |   imagetools   |  table   |   removeformat   |   pastetext   |   code",
     auto_focus: "elm1",
   	height : 300
  });
+	// Applying the specified format
+	tinymce.activeEditor.formatter.apply('custom_format');
  
 </script>
 <script src="js/jQuery/jquery-1.6.1.min.js" type="text/javascript"></script>

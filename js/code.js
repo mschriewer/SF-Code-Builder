@@ -66,17 +66,17 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 <table>\
 <tbody>\
 <tr>\
-<td>08:00 &ndash; 09:00</td>\
+<td>08:00 – 09:00</td>\
 <td>Registration</td>\
 </tr>\
 <tr>\
-<td>09:00 &ndash; 09:15</td>\
+<td>09:00 – 09:15</td>\
 <td>\
 <strong>Preshow with *********</strong>\
 </td>\
 </tr>\
 <tr>\
-<td>09:15 &ndash; 10:45</td>\
+<td>09:15 – 10:45</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Title Keynote</strong>\
@@ -91,7 +91,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>10:45 &ndash; 11:00</td>\
+<td>10:45 – 11:00</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Interview:</strong>\
@@ -102,11 +102,11 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>11:00 &ndash; 11:30</td>\
+<td>11:00 – 11:30</td>\
 <td>Coffee</td>\
 </tr>\
 <tr>\
-<td>11:30 &ndash; 12:30</td>\
+<td>11:30 – 12:30</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Customer Testimonial Panel</strong>\
@@ -121,7 +121,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>12:30 &ndash; 13:30</td>\
+<td>12:30 – 13:30</td>\
 <td>Lunch</td>\
 </tr>\
 </tbody>\
@@ -131,7 +131,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 <table>\
 <tbody>\
 <tr>\
-<td>13:30 &ndash; 14:15</td>\
+<td>13:30 – 14:15</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Sales Cloud</strong>\
@@ -143,7 +143,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>14:25 &ndash; 15:10</td>\
+<td>14:25 – 15:10</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Service Cloud</strong>\
@@ -155,11 +155,11 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>15:10 &ndash; 15:40</td>\
+<td>15:10 – 15:40</td>\
 <td>Coffee</td>\
 </tr>\
 <tr>\
-<td>15:40 &ndash; 16:25</td>\
+<td>15:40 – 16:25</td>\
 <td>\
 <p class=\"flush\">\
 <strong>App Cloud</strong>\
@@ -171,7 +171,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>16:35 &ndash; 17:20</td>\
+<td>16:35 – 17:20</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Marketing Cloud</strong>\
@@ -182,11 +182,11 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 </td>\
 </tr>\
 <tr>\
-<td>17:20 &ndash; 18:00</td>\
+<td>17:20 – 18:00</td>\
 <td>Closing Keynote</td>\
 </tr>\
 <tr>\
-<td>18:00 &ndash; 19:00</td>\
+<td>18:00 – 19:00</td>\
 <td>Drinks</td>\
 </tr>\
 </tbody>\
@@ -195,7 +195,7 @@ str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2
 <table>\
 <tbody>\
 <tr>\
-<td>13:30 &ndash; 14:15</td>\
+<td>13:30 – 14:15</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Headline</strong>\
@@ -208,7 +208,7 @@ Description</p>\
 </td>\
 </tr>\
 <tr>\
-<td>14:25 &ndash; 15:10</td>\
+<td>14:25 – 15:10</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Headline</strong>\
@@ -221,11 +221,11 @@ Description</p>\
 </td>\
 </tr>\
 <tr>\
-<td>15:10 &ndash; 15:40</td>\
+<td>15:10 – 15:40</td>\
 <td>Coffee</td>\
 </tr>\
 <tr>\
-<td>15:40 &ndash; 16:25</td>\
+<td>15:40 – 16:25</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Headline</strong>\
@@ -238,7 +238,7 @@ Description</p>\
 </td>\
 </tr>\
 <tr>\
-<td>16:35 &ndash; 17:20</td>\
+<td>16:35 – 17:20</td>\
 <td>\
 <p class=\"flush\">\
 <strong>Headline</strong>\
@@ -287,7 +287,7 @@ str_details : "<h2>Headline</h2>\
 [Date]</p>\
 <p><strong>Time:</strong><br />\
 [From - Until]</p>",
-str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [city]&nbsp;is full and cannot take your RSVP.</strong></p>\
+str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [city] is full and cannot take your RSVP.</strong></p>\
 <p>If you would like to be placed on the wait list, please complete this form and you will be contacted if a space opens up.</p>\
 <p><strong>Please note: if you do not hear from us, that means we cannot accommodate your RSVP.</strong></p>\
 <p>Sincerely,<br />the Salesforce Team</p>",
