@@ -8,7 +8,7 @@ tinymce.init({
     selector: "#elm1",
 	theme: 'modern',
 	skin: 'mystic',
-	content_css: '/code-builder/css/my-styles.css',
+	content_css: '/css/my-styles.css',
 	preview_styles: false,
     plugins: [
         "code, link, image imagetools, table, paste"
