@@ -211,7 +211,7 @@ $(document ).ready(function() {
         <textarea id="elm1"></textarea>
     </form>
     
-     <!-- Form to capture AddTOCalendar code -->
+     <!-- Form to capture AddToCalendar code -->
     <div id="addtocal">
         <form id="data" action="#"> 
             <div id="sec1"> 
