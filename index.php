@@ -8,6 +8,8 @@ tinymce.init({
     selector: "#elm1",
 	theme: 'modern',
 	skin: 'mystic',
+	content_css: '/code-builder/css/my-styles.css',
+	preview_styles: false,
     plugins: [
         "code, link, image imagetools, table, paste"
     ],
@@ -20,19 +22,19 @@ tinymce.init({
 			{title: 'Heading 3', format: 'h3'},
 			{title: 'Heading 4', format: 'h4'},
 			{title: 'Heading 5', format: 'h5'},
-			{title: 'Font Size 15px', selector: 'li,p,td', classes: 'font-15'},
-			{title: 'Font White', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'font-white'},
+			{title: 'Font Size 15px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'font-15'},
+			{title: 'Font White', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'font-white'},
 			{title: 'Font Dark Gray', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'font-gray'},
 			{title: 'Font Light Gray', selector: 'li,p,td,h1,h2,h3,h4,h5,h6', classes: 'font-gray2'}
 		]},
 		{title: 'Spacing', items: [ 
-			{title: 'Top padding 10px', selector: 'li,p,td', classes: 'top-10'},
-			{title: 'Top padding 20px', selector: 'li,p,td', classes: 'top-20'},
-			{title: 'Top padding 30px', selector: 'li,p,td', classes: 'top-30'},
-			{title: 'Bottom padding 10px', selector: 'li,p,td', classes: 'bottom-10'},
-			{title: 'Bottom padding 20px', selector: 'li,p,td', classes: 'bottom-20'},
-			{title: 'Bottom padding 30px', selector: 'li,p,td', classes: 'bottom-30'},
-			{title: 'Delete spacing', selector: 'ul,li,p,td,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
+			{title: 'Top padding 10px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'top-10'},
+			{title: 'Top padding 20px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'top-20'},
+			{title: 'Top padding 30px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'top-30'},
+			{title: 'Bottom padding 10px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'bottom-10'},
+			{title: 'Bottom padding 20px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'bottom-20'},
+			{title: 'Bottom padding 30px', selector: 'li,p,td,table,div,h1,h2,h3,h4,h5,h6', classes: 'bottom-30'},
+			{title: 'Delete / Add spacing', selector: 'ul,li,p,td,table,div,h1,h2,h3,h4,h5,h6,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
 		]},
 		{title: 'Breakouts', items: [ 
 			{title: 'Time format', selector: 'p', classes: 'flush bold top-10'},

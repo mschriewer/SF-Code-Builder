@@ -5,7 +5,8 @@ var CODER = CODER || {};
 
 CODER.vars = {
 /*Variables*/
-str_agenda: "<table>\
+str_agenda: "<div id=\"agenda\">\
+<table>\
 <tbody>\
 <tr>\
 <td>08:30-09:30</td>\
@@ -60,7 +61,7 @@ str_agenda: "<table>\
 <td>Closing Keynote</td>\
 </tr>\
 </tbody>\
-</table>",
+</table></div>",
 str_agenda_essentials: "<h2 class=\"flush bottom-10 font-26\">Agenda Morning</h2>\
 <h3 class=\"flush bottom-10 font-22\">#Breakout Room 1#</h3>\
 <table>\
@@ -272,7 +273,7 @@ str_location : "<p><strong>Location:</strong><br />\
 str_details : "<h2>Headline</h2>\
 <p>Add your copy in here. Add paragraphs by 'Enter'</p>\
 <p class=\"flush\"><strong>What we will cover:(Feel free to delete the bullet list)</strong></p>\
-<ul>\
+<ul class=\"bullet\">\
 <li>item 1</li>\
 <li>item 2</li>\
 <li>item 3</li>\
