@@ -8,7 +8,8 @@ tinymce.init({
     selector: "#elm1",
 	theme: 'modern',
 	skin: 'mystic',
-	content_css: '/css/my-styles.css',
+	/*content_css: '/css/my-styles.css',*/
+	content_css: '/code-builder/css/my-styles.css',
 	preview_styles: false,
     plugins: [
         "code, link, image imagetools, table, paste"
@@ -37,7 +38,7 @@ tinymce.init({
 			{title: 'Delete / Add spacing', selector: 'ul,li,p,td,table,div,h1,h2,h3,h4,h5,h6,tr,table,h1,h2,h3,h4,h5,h6', classes: 'flush'}
 		]},
 		{title: 'Breakouts', items: [ 
-			{title: 'Time format', selector: 'p', classes: 'flush bold top-10'},
+			
 			{title: 'FAQ Title format', selector: 'p', classes: 'faqTitle'},
 			{title: 'FAQ Abstract format', selector: 'div,p', classes: 'faqContent'},
 		]}
@@ -241,6 +242,7 @@ $(document ).ready(function() {
                       <option value="Paris">Europe/Paris</option>
                       <option value="Berlin">Europe/Berlin</option>
                       <option value="Amsterdam">Europe/Amsterdam</option>
+                      <option value="San Francisco">America/Los_Angeles</option>
                     </select> 
                     <label for="_summary">Title of the Event *</label> 
         			<input id="title" name="_summary" type="text" class="required" placeholder="Event title" />
