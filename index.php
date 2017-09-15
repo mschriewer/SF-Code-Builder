@@ -238,11 +238,11 @@ $(document ).ready(function() {
                     <input id="endtime" name="atc_time_end" type="time" class="required" placeholder="hh:mm" />
         			<label for="_timezone">Time Zone</label>
                      <select name="_timezone">
-                      <option value="London">Europe/London</option>
-                      <option value="Paris">Europe/Paris</option>
-                      <option value="Berlin">Europe/Berlin</option>
-                      <option value="Amsterdam">Europe/Amsterdam</option>
-                      <option value="San Francisco">America/Los_Angeles</option>
+                      <option value="Europe/London">London</option>
+                      <option value="Europe/Paris">Paris</option>
+                      <option value="Europe/Berlin">Berlin</option>
+                      <option value="Europe/Amsterdam">Amsterdam</option>
+                      <option value="America/Los_Angeles">San Francisco</option>
                     </select> 
                     <label for="_summary">Title of the Event *</label> 
         			<input id="title" name="_summary" type="text" class="required" placeholder="Event title" />
