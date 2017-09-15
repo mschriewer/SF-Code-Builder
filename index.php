@@ -110,6 +110,8 @@ $(document ).ready(function() {
 	});	
 	
 	$('#result').attr("value", "");
+	
+	window.alert("Please don't use the Code Builder to update / edit E-Mail template code!\n\nThanks");
 });
 </script>
 </head>
