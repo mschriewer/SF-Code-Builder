@@ -257,7 +257,7 @@ $(document ).ready(function() {
                     <label for="_organizer_email">Email Organizer *</label>
                     <input id="email_organizer" name="_organizer_email" type="text" placeholder="Email Organizer" /-->
         			<button type="submit" id="button" value="submit">create code</button>
-                    <p>(*) Mandatory</p>
+				<p>(*) Mandatory</p>
         	</div> 
             <div id="atcResult">
                     <textarea id="result" name="_result"></textarea>
