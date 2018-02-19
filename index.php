@@ -61,7 +61,7 @@ tinymce.init({
   	height : 300
  });
 	// Applying the specified format
-	tinymce.activeEditor.formatter.apply('custom_format');
+	//tinymce.activeEditor.formatter.apply('custom_format');
  
 </script>
 <script src="js/jQuery/jquery-1.6.1.min.js" type="text/javascript"></script>
@@ -172,7 +172,13 @@ $(document ).ready(function() {
         </div>
         <div class="width-25-min-scr3 width-50-max-scr2 left">
             <div class="gutter-10 center">
-                <h3 class="top-0">Agenda Essentials</h3>
+                <h3 class="top-0">HTML conf mail</h3>
+                <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_conf_mail);" href="#"><img src="images/img-prew-confmail.jpg" class="border-3 shade-3 flex"></a>
+            </div>
+        </div>
+        <div class="width-25-min-scr3 width-50-max-scr2 left">
+            <div class="gutter-10 center">
+                <h3 class="top-0">Agenda Basecamp</h3>
                 <a onClick="tinyMCE.activeEditor.setContent(CODER.vars.str_agenda_essentials);" href="#"><img src="images/img-prew-essentials.jpg" class="border-3 shade-3 flex"></a>
             </div>
         </div>

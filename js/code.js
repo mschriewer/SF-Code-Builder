@@ -288,6 +288,17 @@ str_details : "<h2>Headline</h2>\
 [Date]</p>\
 <p><strong>Time:</strong><br />\
 [From - Until]</p>",
+str_conf_mail : "<center>\
+<table id=\"topTable\" width=\"500\" cellspacing=\"0\" cellpadding=\"5\">\
+<tbody>\
+<tr valign=\"top\">\
+<td style=\"background-color: #ffffff;\">\
+<p style=\"margin-top: 12px;\">&nbsp;Please enter your conf mail text.</p>\
+</td>\
+</tr>\
+</tbody>\
+</table>\
+</center>",
 str_waitlist : "<p><strong>Thanks for your interest. At this time Dreamforce to you in [city] is full and cannot take your RSVP.</strong></p>\
 <p>If you would like to be placed on the wait list, please complete this form and you will be contacted if a space opens up.</p>\
 <p><strong>Please note: if you do not hear from us, that means we cannot accommodate your RSVP.</strong></p>\
